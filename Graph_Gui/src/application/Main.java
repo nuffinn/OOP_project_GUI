@@ -135,12 +135,26 @@ public class Main extends Application {
 		TextField addTF6 = new TextField();
 		
 		Label lbl7 = new Label("Add edge :");
-		TextField addTF7 = new TextField();
+		HBox hb7 = new HBox(); hb7.setSpacing(10);
+		Label lbl71 = new Label("From :");
+		TextField addFrom = new TextField();
+		addFrom.setPrefWidth(30);
+		Label lbl72 = new Label(" To :");
+		TextField addTo = new TextField();
+		addTo.setPrefWidth(30);
+		hb7.getChildren().addAll(lbl71, addFrom, lbl72, addTo);
 		
 		Label lbl8 = new Label("Delete edge :");
-		TextField addTF8 = new TextField();
+		HBox hb8 = new HBox(); hb8.setSpacing(10);
+		Label lbl81 = new Label("From :");
+		TextField delFrom = new TextField();
+		delFrom.setPrefWidth(30);
+		Label lbl82 = new Label(" To :");
+		TextField delTo = new TextField();
+		delTo.setPrefWidth(30);
+		hb8.getChildren().addAll(lbl81, delFrom, lbl82, delTo);
 		
-		autoBox.getChildren().addAll(lbl5, addTF5, lbl6, addTF6, lbl7, addTF7, lbl8, addTF8);
+		autoBox.getChildren().addAll(lbl5, addTF5, lbl6, addTF6, lbl7, hb7, lbl8, hb8);
 		autoBox.setVisible(false);
 		editPane.getChildren().add(autoBox);
 		
@@ -169,6 +183,8 @@ public class Main extends Application {
 		root.setMargin(textBottom, new Insets(5,5,5,5));
 		
 //		Event-Handling
+	
+	// input node textfield cho phan with suggestion	
 		inputField.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
 			@Override
@@ -180,17 +196,138 @@ public class Main extends Application {
 			}
 		});
 		
+		
+	// input node textfield cho phan no suggestion	
 		inputField2.setOnKeyPressed(new EventHandler<KeyEvent>() {
 
 			@Override
 			public void handle(KeyEvent arg0) {
 				if (arg0.getCode().equals(KeyCode.ENTER)) {
 				//event-handling here
-				
+					
 				}
 			}
 		});
 		
+		
+	// Browse file
+		browse.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				
+			}
+		});
+		
+	// Next with suggestion
+		btnNext.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+	// Next without suggestion	
+		btnNext2.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+	// Prev with suggestion
+		btnPrev.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+	// prev without suggestion
+		btnPrev2.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+	
+	//shortest path with suggestion
+		shortbtn.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+	//shortest path without suggestion
+		shortbtn2.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+						
+			}
+		});	
+	
+	// textfield phan add node
+		addTF5.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+			@Override
+			public void handle(KeyEvent arg0) {
+				if (arg0.getCode().equals(KeyCode.ENTER)) {
+				//event-handling here
+					
+				}
+			}
+		});
+		
+	// textfield phan delete node
+			addTF6.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+			@Override
+			public void handle(KeyEvent arg0) {
+				if (arg0.getCode().equals(KeyCode.ENTER)) {
+				//event-handling here
+							
+				}
+			}
+		});
+			
+    //textfield phan add edge
+			addTo.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+				@Override
+				public void handle(KeyEvent arg0) {
+					if (arg0.getCode().equals(KeyCode.ENTER)) {
+					//event-handling here
+								
+					}
+				}
+			});
+	//textfield phan delete edge		
+			delTo.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+				@Override
+				public void handle(KeyEvent arg0) {
+					if (arg0.getCode().equals(KeyCode.ENTER)) {
+					//event-handling here
+								
+					}
+				}
+			});
+	
+		
+// Phan menu ko can handling	
 		withSuggest.setOnAction(new EventHandler<ActionEvent>() {
 
 			@Override
