@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="browse" mnemonicParsing="false" text="Browse" />
+                  <MenuItem fx:id="create" mnemonicParsing="false" text="Create" />
+            </items>
+          </Menu>
+          <Menu fx:id="editMenu" mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem fx:id="auto" mnemonicParsing="false" onAction="#openAuto" text="Auto edit" />
+                  <MenuItem fx:id="byHand" mnemonicParsing="false" onAction="#openByHand" text="Edit by hand" />
+            </items>
+          </Menu>
+          <Menu fx:id="stimulate" mnemonicParsing="false" text="Stimulate">
+            <items>
+              <MenuItem fx:id="withSuggest" mnemonicParsing="false" onAction="#openSuggestBox" text="Suggestion" />
+                  <MenuItem fx:id="noSuggest" mnemonicParsing="false" onAction="#openNoSuggestBox" text="No suggestion" />
+            </items>
+          </Menu>
+            <Menu fx:id="informationMenu" mnemonicParsing="false" text="Info" />
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <VBox prefHeight="748.0" prefWidth="275.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane>
+               <children>
+                  <VBox fx:id="suggestBox" alignment="TOP_CENTER" prefHeight="280.0" prefWidth="275.0" spacing="10.0" visible="false">
+                     <children>
+                        <Label fx:id="lbl1" text="Suggest Node :" />
+                        <TextField fx:id="suggestTF" editable="false" prefWidth="250.0" />
+                        <Label fx:id="lbl2" text="Input node :" />
+                        <TextField fx:id="inputField" prefWidth="250.0" />
+                        <HBox alignment="CENTER" prefHeight="56.0" prefWidth="275.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btnPrev" mnemonicParsing="false" text="Prev" />
+                              <Button fx:id="btnNext" mnemonicParsing="false" text="Next" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="shortbtn" mnemonicParsing="false" text="Shortest Path" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox fx:id="noSuggestBox" alignment="TOP_CENTER" prefHeight="282.0" prefWidth="275.0" spacing="10.0" visible="false">
+                     <children>
+                        <Label fx:id="lbl3" text="List of nodes : " />
+                        <TextField fx:id="suggestTF2" editable="false" prefWidth="250.0" />
+                        <Label fx:id="lbl4" text="Input node :" />
+                        <TextField fx:id="inputField2" prefWidth="250.0" />
+                        <HBox alignment="CENTER" prefHeight="55.0" prefWidth="275.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="btnPrev2" mnemonicParsing="false" text="Prev" />
+                              <Button fx:id="btnNext2" mnemonicParsing="false" text="Next" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="shortbtn2" mnemonicParsing="false" text="Shortest path" />
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="251.0" prefWidth="275.0">
+               <children>
+                  <VBox fx:id="autoBox" prefHeight="305.0" prefWidth="275.0" spacing="5.0" visible="false">
+                     <children>
+                        <Label fx:id="lbl5" text="Add Node :" />
+                        <TextField fx:id="addTF5" />
+                        <Label fx:id="lbl6" text="Delete node" />
+                        <TextField fx:id="addTF6" />
+                        <Label fx:id="lbl7" text="Add edge :" />
+                        <HBox prefHeight="46.0" prefWidth="275.0" spacing="20.0">
+                           <children>
+                              <Label fx:id="lbl72" text="From :" />
+                              <TextField fx:id="addFrom" prefWidth="40.0" />
+                              <Label fx:id="lbl71" text="To :" />
+                              <TextField fx:id="addTo" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="lbl8" text="Delete edge :" />
+                        <HBox prefHeight="50.0" prefWidth="275.0" spacing="20.0">
+                           <children>
+                              <Label fx:id="lbl81" text="From :" />
+                              <TextField fx:id="delFrom" prefWidth="40.0" />
+                              <Label fx:id="lbl82" text="To :" />
+                              <TextField fx:id="delTo" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="handBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" visible="false">
+                     <children>
+                        <TextArea fx:id="textA" prefHeight="400.0" prefWidth="250.0" />
+                        <Button fx:id="saveBtn" mnemonicParsing="false" text="Save" />
+                     </children>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <TextArea prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </TextArea>
+         </bottom>
+      </BorderPane>
+   </center>
+</BorderPane>
