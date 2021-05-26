@@ -12,7 +12,7 @@
         <menus>
           <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
             <items>
-              <MenuItem fx:id="browse" mnemonicParsing="false" text="Browse" />
+              <MenuItem fx:id="browse" mnemonicParsing="false" onAction="#browseFile" text="Browse" />
                   <MenuItem fx:id="create" mnemonicParsing="false" text="Create" />
             </items>
           </Menu>
@@ -42,14 +42,14 @@
                         <Label fx:id="lbl1" text="Suggest Node :" />
                         <TextField fx:id="suggestTF" editable="false" prefWidth="250.0" />
                         <Label fx:id="lbl2" text="Input node :" />
-                        <TextField fx:id="inputField" prefWidth="250.0" />
+                        <TextField fx:id="inputField" onAction="#withSuggestInput" prefWidth="250.0" />
                         <HBox alignment="CENTER" prefHeight="56.0" prefWidth="275.0" spacing="20.0">
                            <children>
-                              <Button fx:id="btnPrev" mnemonicParsing="false" text="Prev" />
-                              <Button fx:id="btnNext" mnemonicParsing="false" text="Next" />
+                              <Button fx:id="btnPrev" mnemonicParsing="false" onAction="#prevWithSuggest" text="Prev" />
+                              <Button fx:id="btnNext" mnemonicParsing="false" onAction="#nextWithSuggest" text="Next" />
                            </children>
                         </HBox>
-                        <Button fx:id="shortbtn" mnemonicParsing="false" text="Shortest Path" />
+                        <Button fx:id="shortbtn" mnemonicParsing="false" onAction="#shortestWithSuggest" text="Shortest Path" />
                      </children>
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -60,14 +60,14 @@
                         <Label fx:id="lbl3" text="List of nodes : " />
                         <TextField fx:id="suggestTF2" editable="false" prefWidth="250.0" />
                         <Label fx:id="lbl4" text="Input node :" />
-                        <TextField fx:id="inputField2" prefWidth="250.0" />
+                        <TextField fx:id="inputField2" onAction="#withNoSuggestInput" prefWidth="250.0" />
                         <HBox alignment="CENTER" prefHeight="55.0" prefWidth="275.0" spacing="20.0">
                            <children>
-                              <Button fx:id="btnPrev2" mnemonicParsing="false" text="Prev" />
-                              <Button fx:id="btnNext2" mnemonicParsing="false" text="Next" />
+                              <Button fx:id="btnPrev2" mnemonicParsing="false" onAction="#prevWithoutSuggest" text="Prev" />
+                              <Button fx:id="btnNext2" mnemonicParsing="false" onAction="#nextWithoutSuggest" text="Next" />
                            </children>
                         </HBox>
-                        <Button fx:id="shortbtn2" mnemonicParsing="false" text="Shortest path" />
+                        <Button fx:id="shortbtn2" mnemonicParsing="false" onAction="#shortestWithoutSuggest" text="Shortest path" />
                      </children>
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

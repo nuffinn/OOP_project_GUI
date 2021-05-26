@@ -12,6 +12,8 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 
 public class MyController implements Initializable {
@@ -130,4 +132,47 @@ public class MyController implements Initializable {
 		handBox.setVisible(true);
 		autoBox.setVisible(false);
 	}
+	
+	public void browseFile(ActionEvent event) {
+		
+	}
+	
+	public void withSuggestInput(KeyEvent event) {
+		if (event.getCode().equals(KeyCode.ENTER)) {
+			
+		}
+	}
+	
+	public void withNoSuggestInput(KeyEvent event) {
+		if (event.getCode().equals(KeyCode.ENTER)) {
+			
+		}
+	}
+	
+	public void nextWithSuggest(ActionEvent event) {
+		
+	}
+	
+	public void nextWithoutSuggest(ActionEvent event) {
+		
+	}
+	
+	public void prevWithSuggest(ActionEvent event) {
+		
+	}
+
+	public void prevWithoutSuggest(ActionEvent event) {
+		
+	}
+	
+	public void shortestWithSuggest(ActionEvent event) {
+		
+	}
+	
+	public void shortestWithoutSuggest(ActionEvent event) {
+		
+	}
+	
+	
+	
 }
