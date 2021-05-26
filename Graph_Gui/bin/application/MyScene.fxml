@@ -33,11 +33,11 @@
       </MenuBar>
    </top>
    <right>
-      <VBox prefHeight="748.0" prefWidth="275.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="650.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <StackPane>
+            <StackPane prefHeight="238.0" prefWidth="200.0">
                <children>
-                  <VBox fx:id="suggestBox" alignment="TOP_CENTER" prefHeight="280.0" prefWidth="275.0" spacing="10.0" visible="false">
+                  <VBox fx:id="suggestBox" alignment="TOP_CENTER" prefHeight="280.0" prefWidth="275.0" spacing="5.0" visible="false">
                      <children>
                         <Label fx:id="lbl1" text="Suggest Node :" />
                         <TextField fx:id="suggestTF" editable="false" prefWidth="250.0" />
@@ -55,7 +55,7 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                   </VBox>
-                  <VBox fx:id="noSuggestBox" alignment="TOP_CENTER" prefHeight="282.0" prefWidth="275.0" spacing="10.0" visible="false">
+                  <VBox fx:id="noSuggestBox" alignment="TOP_CENTER" prefHeight="282.0" prefWidth="275.0" spacing="5.0" visible="false">
                      <children>
                         <Label fx:id="lbl3" text="List of nodes : " />
                         <TextField fx:id="suggestTF2" editable="false" prefWidth="250.0" />
@@ -84,7 +84,7 @@
                         <Label fx:id="lbl6" text="Delete node" />
                         <TextField fx:id="addTF6" />
                         <Label fx:id="lbl7" text="Add edge :" />
-                        <HBox prefHeight="46.0" prefWidth="275.0" spacing="20.0">
+                        <HBox prefHeight="46.0" prefWidth="275.0" spacing="10.0">
                            <children>
                               <Label fx:id="lbl72" text="From :" />
                               <TextField fx:id="addFrom" prefWidth="40.0" />
@@ -93,7 +93,7 @@
                            </children>
                         </HBox>
                         <Label fx:id="lbl8" text="Delete edge :" />
-                        <HBox prefHeight="50.0" prefWidth="275.0" spacing="20.0">
+                        <HBox prefHeight="50.0" prefWidth="275.0" spacing="10.0">
                            <children>
                               <Label fx:id="lbl81" text="From :" />
                               <TextField fx:id="delFrom" prefWidth="40.0" />
@@ -102,6 +102,9 @@
                            </children>
                         </HBox>
                      </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
                   </VBox>
                   <VBox fx:id="handBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" visible="false">
                      <children>

@@ -2,6 +2,8 @@ package application;
 
 import java.io.IOException;
 
+import com.sun.javafx.tk.quantum.PrimaryTimer;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -346,6 +348,7 @@ public class Main extends Application {
 //		});
 //		
 ////		Scene setup
+		primaryStage.setTitle("OOP_Project");
 		Parent root = FXMLLoader.load(getClass().getResource("MyScene.fxml"));
 		primaryStage.setScene(new Scene(root)); 
 		primaryStage.show();
