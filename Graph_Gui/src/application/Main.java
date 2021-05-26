@@ -170,12 +170,8 @@ public class Main extends Application {
 		
 		root.setRight(bigVBox);
 //		Center setup
-		TabPane tabPane = new TabPane();
-		tabPane.setPadding(new Insets(5,5,5,5));
-		
-		Tab tabDefault = new Tab("Default");
-		tabPane.getTabs().add(tabDefault);
-		root.setCenter(tabPane);
+		BorderPane midPane = new BorderPane();
+		root.setCenter(midPane);
 		
 //		Bottom setup (chua lam)
 		TextArea textBottom = new TextArea();
