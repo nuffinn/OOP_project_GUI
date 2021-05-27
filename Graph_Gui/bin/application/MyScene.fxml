@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyController">
+<BorderPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
             <items>
               <MenuItem fx:id="browse" mnemonicParsing="false" onAction="#browseFile" text="Browse" />
-                  <MenuItem fx:id="create" mnemonicParsing="false" text="Create" />
+                  <MenuItem fx:id="create" mnemonicParsing="false" onAction="#createGraph" text="Create" />
             </items>
           </Menu>
           <Menu fx:id="editMenu" mnemonicParsing="false" text="Edit">
@@ -42,7 +42,7 @@
                         <Label fx:id="lbl1" text="Suggest Node :" />
                         <TextField fx:id="suggestTF" editable="false" prefWidth="250.0" />
                         <Label fx:id="lbl2" text="Input node :" />
-                        <TextField fx:id="inputField" onAction="#withSuggestInput" prefWidth="250.0" />
+                        <TextField fx:id="inputField" onKeyTyped="#withSuggestInput" prefWidth="250.0" />
                         <HBox alignment="CENTER" prefHeight="56.0" prefWidth="275.0" spacing="20.0">
                            <children>
                               <Button fx:id="btnPrev" mnemonicParsing="false" onAction="#prevWithSuggest" text="Prev" />
@@ -60,7 +60,7 @@
                         <Label fx:id="lbl3" text="List of nodes : " />
                         <TextField fx:id="suggestTF2" editable="false" prefWidth="250.0" />
                         <Label fx:id="lbl4" text="Input node :" />
-                        <TextField fx:id="inputField2" onAction="#withNoSuggestInput" prefWidth="250.0" />
+                        <TextField fx:id="inputField2" onKeyTyped="#withNoSuggestInput" prefWidth="250.0" />
                         <HBox alignment="CENTER" prefHeight="55.0" prefWidth="275.0" spacing="20.0">
                            <children>
                               <Button fx:id="btnPrev2" mnemonicParsing="false" onAction="#prevWithoutSuggest" text="Prev" />
@@ -80,16 +80,16 @@
                   <VBox fx:id="autoBox" prefHeight="305.0" prefWidth="275.0" spacing="5.0" visible="false">
                      <children>
                         <Label fx:id="lbl5" text="Add Node :" />
-                        <TextField fx:id="addTF5" />
+                        <TextField fx:id="addTF5" onAction="#addNodeInput" />
                         <Label fx:id="lbl6" text="Delete node" />
-                        <TextField fx:id="addTF6" />
+                        <TextField fx:id="addTF6" onAction="#deleteNodeInput" />
                         <Label fx:id="lbl7" text="Add edge :" />
                         <HBox prefHeight="46.0" prefWidth="275.0" spacing="10.0">
                            <children>
                               <Label fx:id="lbl72" text="From :" />
                               <TextField fx:id="addFrom" prefWidth="40.0" />
                               <Label fx:id="lbl71" text="To :" />
-                              <TextField fx:id="addTo" prefWidth="40.0" />
+                              <TextField fx:id="addTo" onAction="#addEdgeInput" prefWidth="40.0" />
                            </children>
                         </HBox>
                         <Label fx:id="lbl8" text="Delete edge :" />
@@ -98,7 +98,7 @@
                               <Label fx:id="lbl81" text="From :" />
                               <TextField fx:id="delFrom" prefWidth="40.0" />
                               <Label fx:id="lbl82" text="To :" />
-                              <TextField fx:id="delTo" prefWidth="40.0" />
+                              <TextField fx:id="delTo" onAction="#deleteEdgeInput" prefWidth="40.0" />
                            </children>
                         </HBox>
                      </children>
@@ -109,7 +109,7 @@
                   <VBox fx:id="handBox" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" visible="false">
                      <children>
                         <TextArea fx:id="textA" prefHeight="400.0" prefWidth="250.0" />
-                        <Button fx:id="saveBtn" mnemonicParsing="false" text="Save" />
+                        <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#savingButton" text="Save" />
                      </children>
                      <padding>
                         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
