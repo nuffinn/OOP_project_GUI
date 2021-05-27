@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyController">
+<BorderPane prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: paleyellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -30,10 +31,13 @@
           </Menu>
             <Menu fx:id="informationMenu" mnemonicParsing="false" text="Info" />
         </menus>
+         <effect>
+            <ColorAdjust brightness="0.02" contrast="-0.08" hue="-0.03" saturation="-0.15" />
+         </effect>
       </MenuBar>
    </top>
    <right>
-      <VBox prefHeight="650.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="650.0" prefWidth="200.0" style="-fx-background-color: beige;" BorderPane.alignment="CENTER">
          <children>
             <StackPane prefHeight="238.0" prefWidth="200.0">
                <children>
